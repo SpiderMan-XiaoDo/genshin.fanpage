@@ -1,0 +1,9 @@
+.body_cover{
+    background-image: url('../../img/Body/Body_Picture.png');
+    background-size: cover;
+    width: 100%;
+    height: 4200px;
+    position: absolute;
+    z-index: -1;
+    top: 515px;
+}

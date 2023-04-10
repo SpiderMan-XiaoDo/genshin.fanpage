@@ -1,0 +1,65 @@
+.heading_header{
+    background-image: url('../../img/Heading/heading_background.png');
+    background-size: cover;
+    width: 100%;
+    height: 880px;
+}
+.heading_officialsite{
+    position: absolute;
+    width: 161px;
+    height: 53px;
+    right: 0;
+    top:0;
+}
+.heading_logo{
+    position: absolute;
+    width: 82px;
+    height: 50px;
+    left: 16px;
+    top:8px;
+}
+.heading_title{
+    position: absolute;
+    width: 398px;
+    height: 300px;
+    top: 126px;
+    left: 100px;
+}
+.heading_video{
+    position: absolute;
+    width: 88px;
+    height: 91px;
+    top: 260px;
+    left:400px;
+}
+.heading_pcdownload{
+    position: absolute;
+    top: 385px;
+    left: 115px;
+    width: 180px;
+    height: 50px;
+}
+.heading_ortherdownload{
+    position: absolute;
+    top: 385px;
+    left: 305px;
+    width: 180px;
+    height: 50px;
+}
+.heading_pagedown{
+    position: absolute;
+    top: 490px;
+    left: 580px;
+    width: 180px;
+    height: 50px;
+    width: 50px;
+    animation: nextPageBTN 1.5s ease-in-out alternate-reverse infinite ;
+}
+@keyframes nextPageBTN {
+    from{
+        transform: translateY(-8%);
+    }
+    to{
+        transform: translateY(8%);
+    }
+}
