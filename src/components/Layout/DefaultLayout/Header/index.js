@@ -6,13 +6,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Tippy from '@tippyjs/react/headless'
 import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { Wrapper as PopperWrapper } from '../../../../components/Popper'
+import AccountItem from '../../../AccountItem'
 const cx = classNames.bind(styles)
 function Header() {
     const [searchResult, setSearchResult] = useState([])
     useEffect(() => {
         setTimeout(() => {
             setSearchResult([1, 2, 3])
-        }, 3000)
+        }, 0)
     }, [])
     return (
         <header className={cx('wrapper')} >
@@ -23,11 +24,15 @@ function Header() {
 
                 <Tippy
                     visible={searchResult.length > 0}
+                    interactive
                     render={attrs => {
                         return (
                             <div className={cx('search-result')} tabIndex={-1}>
                             <PopperWrapper>
-                                Kết Quả
+                                <h4 className={cx('search-title')}>
+                                    Accounts
+                                </h4>
+                                <AccountItem/>
                             </PopperWrapper>
                             </div>
                         )
