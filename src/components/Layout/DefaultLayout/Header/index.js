@@ -7,6 +7,7 @@ import Tippy from '@tippyjs/react/headless'
 import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { Wrapper as PopperWrapper } from '../../../../components/Popper'
 import AccountItem from '../../../AccountItem'
+import Button from '../../../Button'
 const cx = classNames.bind(styles)
 function Header() {
     const [searchResult, setSearchResult] = useState([])
@@ -50,7 +51,11 @@ function Header() {
                         </button>
                     </div>
                 </Tippy>
-                <div className={cx('actions')}></div>
+                <div className={cx('actions')}>
+                    <Button primary >
+                        Login
+                    </Button>
+                </div>
             </div>
         </header>
     )
