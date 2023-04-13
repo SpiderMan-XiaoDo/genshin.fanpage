@@ -4,7 +4,7 @@ import classNames from 'classnames/bind'
 import images from '../../../../assets/images'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Tippy from '@tippyjs/react/headless'
-import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faCircleXmark, faSpinner, faMagnifyingGlass, faSign } from '@fortawesome/free-solid-svg-icons'
 import { Wrapper as PopperWrapper } from '../../../../components/Popper'
 import AccountItem from '../../../AccountItem'
 import Button from '../../../Button'
@@ -13,7 +13,7 @@ function Header() {
     const [searchResult, setSearchResult] = useState([])
     useEffect(() => {
         setTimeout(() => {
-            setSearchResult([1, 2, 3])
+            setSearchResult([])
         }, 0)
     }, [])
     return (
@@ -29,12 +29,12 @@ function Header() {
                     render={attrs => {
                         return (
                             <div className={cx('search-result')} tabIndex={-1}>
-                            <PopperWrapper>
-                                <h4 className={cx('search-title')}>
-                                    Accounts
-                                </h4>
-                                <AccountItem/>
-                            </PopperWrapper>
+                                <PopperWrapper>
+                                    <h4 className={cx('search-title')}>
+                                        Accounts
+                                    </h4>
+                                    <AccountItem />
+                                </PopperWrapper>
                             </div>
                         )
                     }}
@@ -52,8 +52,14 @@ function Header() {
                     </div>
                 </Tippy>
                 <div className={cx('actions')}>
-                    <Button primary >
+                    <Button text>
+                        Upload
+                    </Button>
+                    <Button primary  className={cx('custom-log-in')} leftIcon = {<FontAwesomeIcon icon={faSign}/>}>
                         Login
+                    </Button>
+                    <Button outline>
+                        Register
                     </Button>
                 </div>
             </div>
